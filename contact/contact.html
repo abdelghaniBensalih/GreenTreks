@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="contact.css" rel="stylesheet">
+    <title>À Votre Service</title>
+</head>
+<body>
+        <section id="contact" class="container-fluide p-3">
+            <header>
+                <h2 class="spec_head text-center">À Votre Service</h2>
+            </header>
+
+            <div class="box_contact row h-50">
+                <div class="col h-100">
+                    <h4>Envoyez-nous un Message 📩</h4>
+                    <textarea id="userMessage" class="h-50 w-100 mt-2" placeholder="Nous sommes impatients de vous lire ! Que ce soit une question, une suggestion ou un simple bonjour, n'hésitez pas à nous écrire. Remplissez le champ ci-dessous et cliquez sur Envoyer"></textarea>
+                    <button class="btn btn-success mt-2" onclick="sendEmail()">Envoyer</button>
+                </div>
+                <div class="col">
+                    <h4>Ou scannez pour envoyer un email</h4>
+                    <img class="h-50" src="images/tomail_pro.png" alt="Contact QR Code">
+                </div>
+                <div class="d-flex justify-content-evenly">
+                    <a href="#"><img src="images/whatssap.png" alt="icon whatssap"></a>
+                    <a href="#"><img src="images/intagram.png" alt="icon instagram"></a>
+                    <a href="#"><img src="images/X.png" alt="icon X"></a>
+                </div>
+                
+            </div>
+        </section>
+        <script>
+            function sendEmail() {
+                const message = document.getElementById("userMessage").value;
+                const email = "mouadbourquouquou@gmail.com";
+                const subject = "Contact Form Message";
+                const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+                window.location.href = mailtoLink;
+            }
+        </script>
+</body>
+</html>
