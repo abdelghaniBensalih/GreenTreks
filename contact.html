@@ -3,41 +3,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="contact.css" rel="stylesheet">
-    <title>À Votre Service</title>
+    <link href="contact/contact.css" rel="stylesheet">
+    <title>CONTACT US</title>
 </head>
 <body>
-        <section id="contact" class="container-fluide p-3">
-            <header>
-                <h2 class="spec_head text-center">À Votre Service</h2>
-            </header>
+    <section id="contact" class="container-fluid p-5">
+        <!-- Header Section -->
+        <header class="text-center mb-5">
+            <h4 class="text-success">CONTACT US</h4>
+            <h2 class="text-success">Contact for any query</h2>
+        </header>
+        
+        <!-- Main Section -->
+        <main class="container">
+            <div class="row gy-5">
+                <!-- Contact Icons -->
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-start mb-4">
+                        <img src="img/contact/whatssap.png" alt="icon whatsapp" class="me-3" width="30">
+                        <div>
+                            <h6 class="text-success mb-0">WhatsApp</h6>
+                            <p class="mb-0">+212 600609000</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <img src="img/contact/gmail.png" alt="icon email" class="me-3" width="30">
+                        <div>
+                            <h6 class="text-success mb-0">Email</h6>
+                            <p class="mb-0">mouadbourquouquou@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <img src="img/contact/phone.png" alt="icon phone" class="me-3" width="30">
+                        <div>
+                            <h6 class="text-success mb-0">Mobile</h6>
+                            <p class="mb-0">+212 600609000</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="box_contact row h-50">
-                <div class="col h-100">
-                    <h4>Envoyez-nous un Message 📩</h4>
-                    <textarea id="userMessage" class="h-50 w-100 mt-2" placeholder="Nous sommes impatients de vous lire ! Que ce soit une question, une suggestion ou un simple bonjour, n'hésitez pas à nous écrire. Remplissez le champ ci-dessous et cliquez sur Envoyer"></textarea>
-                    <button class="btn btn-success mt-2" onclick="sendEmail()">Envoyer</button>
+                <!-- the image between the contact information and the message section -->
+                <div class="col-lg-4">
+                    <figure class="text-center">
+                        <img src="img/bg-hero.jpeg" alt="mountain image" class="img-fluid rounded-4">
+                    </figure>
                 </div>
-                <div class="col">
-                    <h4>Ou scannez pour envoyer un email</h4>
-                    <img class="h-50" src="img/contact/tomail_pro.png" alt="Contact QR Code">
+
+                <!-- send a Message -->
+                <div class="col-lg-4">
+                    <div>
+                        <h4 class="text-success">Get in Touch with Us 📩</h4>
+                        <textarea id="userMessage" class="form-control mb-3" rows="6" placeholder="We can't wait to hear from you!"></textarea>
+                        <button class="btn btn-success w-100" onclick="sendEmail()">Send Message</button>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-evenly">
-                    <a href="#"><img src="img/contact/whatssap.png" alt="icon whatssap"></a>
-                    <a href="#"><img src="img/contact/intagram.png" alt="icon instagram"></a>
-                    <a href="#"><img src="img/contact/X.png" alt="icon X"></a>
-                </div>
-                
             </div>
-        </section>
-        <script>
-            function sendEmail() {
-                const message = document.getElementById("userMessage").value;
-                const email = "mouadbourquouquou@gmail.com";
-                const subject = "Contact Form Message";
-                const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
-                window.location.href = mailtoLink;
-            }
-        </script>
+        </main>
+    </section>
+
+    <!-- javascript to send the message via email automatic -->
+    <script>
+        function sendEmail() {
+            const message = document.getElementById("userMessage").value;
+            const email = "mouadbourquouquou@gmail.com";
+            const subject = "Contact Form Message";
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>
