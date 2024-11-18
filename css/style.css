@@ -40,8 +40,9 @@
     color: #fff; /* White for clarity */
 }
 
-/* Animation  */
+/*** Animation  ***/
 
+ /*SlideIndown*/
 @keyframes slideInDown {
     from {
       transform: translate3d(0, -100%, 0);
@@ -57,6 +58,7 @@
     animation-name: slideInDown;
   }
 
+  /*animated*/
 .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -78,12 +80,7 @@
   }
 
 
-
-
-
-
-
-
+/*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
     position: relative;
@@ -110,6 +107,42 @@
     color: #170e0e !important;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23006400' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 100, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
 }
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
