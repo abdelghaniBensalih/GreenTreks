@@ -35,7 +35,7 @@
     position: relative; /* So text sits above the overlay */
     z-index: 1;
     text-align: center;
-    padding-top: 20px; /* Adjust as needed */
+     padding: 7%;/* Adjust as needed */
     
     color: #fff; /* White for clarity */
 }
