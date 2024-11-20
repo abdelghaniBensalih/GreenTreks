@@ -144,7 +144,7 @@
                             <img class="img-fluid" src="img/packages/package-1.png" alt="">
                         </div>
                         <div class="d-flex border-bottom">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Amazigh villages,</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>Amazigh Villages</small>
                             <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt text-primary me-2"></i>7 days</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i> +2 Person</small>
                         </div>
@@ -357,27 +357,27 @@
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control bg-transparent " id="name" placeholder="Your Name">
-                                        <label for="name" class="text-white">Your Name</label>
+                                        <label for="name" class="text-success">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
-                                        <label for="email" class="text-white">Your Email</label>
+                                        <label for="email" class="text-success">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime" class="text-white">Date & Time</label>
+                                        <input type="text" class="form-control text-white bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <label for="datetime" class="text-success">Date & Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <select class="form-select " id="select1">
-                                            <option value="1" class="text-success">Destination 1</option>
-                                            <option value="2" class="text-success">Destination 2</option>
-                                            <option value="3" class="text-white">Destination 3</option>
+                                            <option value="1" >Amazigh Villages</option>
+                                            <option value="2" >Essaouira</option>
+                                            <option value="3">Marrakech</option>
                                         </select>
                                         <label for="select1" class="text-white">Destination</label>
                                     </div>
@@ -385,7 +385,7 @@
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-transparent text-white" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message" class="text-white">Special Request</label>
+                                        <label for="message" class="text-success">Special Request</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -399,21 +399,66 @@
         </div>
     </div>
     <!-- Bookings End -->
+     
 
-    <!-- copy right start -->
-    <div class="container-fluid bg-dark text-white py-3">
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5">
         <div class="container">
             <div class="row">
+                <!-- Social Media Links -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Follow Us</h5>
+                    <a href="https://www.instagram.com/green_treks/profilecard/?igsh=MW40b29vcTY1M2NrMA%3D" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/greentreks/" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+    
+                <!-- Newsletter Signup Form -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Newsletter</h5>
+                    <form id="newsletter-form" action="https://formspree.io/f/xeoqzlol" method="POST">
+                        <div class="input-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                            <button class="btn btn-success" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <p id="subscribe-message" class="mt-2 text-success d-none">Thank you for subscribing! You've successfully joined the GreenTreks newsletter. Stay tuned for updates, travel tips, and exclusive offers delivered straight to your inbox</p>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="col-md-4 text-center text-md-end">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="#packages" class="text-white">Travel Packages</a></li>
+                        <li><a href="#volunteer-opportunities" class="text-white">Volunteer Opportunities</a></li>
+                        <li><a href="#blog" class="text-white">Blog</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="row mt-4">
                 <div class="col-md-6 text-center text-md-start">
                     <p class="mb-0">© 2024 GreenTreks. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a href="#" class="text-white">EMJE Dev Team</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- copy right end -->
+    <!-- Footer End -->
+    
+    <!-- JavaScript for Success Message -->
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            const subscribeMessage = document.getElementById('subscribe-message');
+            subscribeMessage.classList.remove('d-none'); // Show the success message
+        });
+    </script>
+    
+
+
+    
 
 
     
