@@ -1,0 +1,24 @@
+/* General card styles */
+.city-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.city-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.city-card:hover {
+    transform: scale(1.05);
+}
+
+/* Button styles (optional customization) */
+.city-card .btn {
+    margin-top: 10px;
+    width: 100%; /* Makes the button full width */
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+}
