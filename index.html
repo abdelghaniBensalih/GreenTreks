@@ -364,44 +364,45 @@
                         <p class="mb-4">
                             Embark on a memorable adventure with GreenTreks. Book your eco-friendly travel experience and explore Morocco’s hidden gems. Let us guide you on a journey where nature, culture, and sustainability meet.
                         </p>
-                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Book Now</a>
+                        
                     </div>
-                    
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form>
+                        <form action="https://formspree.io/f/xdkolrkr" method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent text-white" id="name" placeholder="Your Name">
-                                        <label for="name" class="text-success">Your Name</label>
+                                        <input type="text" class="form-control bg-transparent text-white" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name" class="text-success">Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent text-white" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control bg-transparent text-white" id="email" name="email" placeholder="Your Email" required>
                                         <label for="email" class="text-success">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control text-white bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                    <div class="form-floating date" id="datetimepicker">
+                                        <input type="date" class="form-control  datetimepicker-input" id="datetime" name="datetime" placeholder="Date & Time" data-toggle="datetimepicker" />
                                         <label for="datetime" class="text-success">Date & Time</label>
-                                    </div>
+                                    </div>                                    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select " id="select1">
-                                            <option value="1" >Amazigh Villages</option>
-                                            <option value="2" >Essaouira</option>
-                                            <option value="3">Marrakech</option>
-                                        </select>
-                                        <label for="select1" class="text-white">Destination</label>
+                                        <input 
+                                            type="text" 
+                                            class="form-control bg-transparent text-white" 
+                                            id="destination" 
+                                            name="destination" 
+                                            placeholder="Destination">
+                                        <label for="destination" class="text-success">Destination</label>
                                     </div>
                                 </div>
+                                
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent text-white" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control bg-transparent text-white" placeholder="Special Request" id="message" name="message" style="height: 100px"></textarea>
                                         <label for="message" class="text-success">Special Request</label>
                                     </div>
                                 </div>
@@ -415,6 +416,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Bookings End -->
      
 
@@ -434,7 +436,7 @@
                     <h5 class="text-uppercase mb-4">Newsletter</h5>
                     <form id="newsletter-form" action="https://formspree.io/f/xdkolrkr" method="POST">
                         <div class="input-group">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email Address" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                             <button class="btn btn-success" type="submit">Subscribe</button>
                         </div>
                     </form>
@@ -479,37 +481,7 @@
 
 
     
-    <!-- javascript to send the booking details via email -->
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const datetime = document.getElementById('datetime').value;
-            const destination = document.getElementById('select1').value;
-            const message = document.getElementById('message').value;
-            
-            const bookingDetails = `
-                Name: ${name}
-                Email: ${email}
-                Date & Time: ${datetime}
-                Destination: ${destination}
-                Special Request: ${message}
-            `;
-            
-            const mailtoLink = `mailto:greentreks@yahoo.com?subject=Booking Details&body=${encodeURIComponent(bookingDetails)}`;
-            window.location.href = mailtoLink;
-        });
-    </script>
-
-    <!-- Contact End -->
-
-    
-    <!-- JavaScript Libraries -->
-    
-   
-
+  
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     
